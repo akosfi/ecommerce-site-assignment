@@ -1,0 +1,14 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "Poly Edge 550",
+            "price": 30
+        },
+        {
+            "id": 2,
+            "name": "Poly Edge 320",
+            "price": 30
+        }
+    ]
+}
