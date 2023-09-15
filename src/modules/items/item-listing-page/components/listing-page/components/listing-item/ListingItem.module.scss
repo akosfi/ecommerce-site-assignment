@@ -5,13 +5,14 @@
     width: 248px;
     padding: 32px 24px 12px 24px;
     box-sizing: border-box;
+    position: relative;
 
     .image {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 16px;
-        height: 180px;
+        height: 140px;
 
         img {
             max-width: 100%;
@@ -28,5 +29,11 @@
         font-size: 16px;
         margin-bottom: 8px;
         font-weight: 700;
+    }
+
+    .tooltip {
+        position: absolute;
+        top: 8px;
+        right: 8px;
     }
 }

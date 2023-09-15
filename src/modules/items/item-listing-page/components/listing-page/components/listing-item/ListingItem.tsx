@@ -3,6 +3,7 @@ import { Item } from 'modules/items';
 import { FC, useMemo } from 'react';
 
 import css from './ListingItem.module.scss';
+import ToolTip from './components/tooltip/Tooltip';
 
 type ListingItemProps = {
     item: Item;
@@ -29,7 +30,7 @@ const ListingItem: FC<ListingItemProps> = ({ item }) => {
             <p className={css['name']}>{item.name}</p>
             <p className={css['price']}>{formattedPrice}</p>
             <AddToCartButton item={item} />
-            <div className={css['tooltip']}></div>
+            <ToolTip item={item} className={css['tooltip']} />
         </div>
     );
 };

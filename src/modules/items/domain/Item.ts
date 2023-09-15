@@ -9,5 +9,5 @@ export interface Item {
     bluetooth: string;
     connection: string;
     usb: string;
-    poE: string;
+    poE: boolean;
 }

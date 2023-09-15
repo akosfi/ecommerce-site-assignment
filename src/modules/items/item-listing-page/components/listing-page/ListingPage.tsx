@@ -26,7 +26,7 @@ const ListingPage: FC<ListingPageProps> = ({ items }) => (
             </h1>
             <div className={css['items']}>
                 {items.map((item) => (
-                    <ListingItem item={item} />
+                    <ListingItem item={item} key={item.id} />
                 ))}
             </div>
         </section>

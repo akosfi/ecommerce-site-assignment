@@ -11,7 +11,7 @@
             "bluetooth": "Yes with Mobile Pairing.",
             "connection": "2 x Rj45 and Wi-Fi",
             "usb": "2 x USB-C",
-            "poE": "Yes"
+            "poE": true
         },
         {
             "id": 2,
@@ -24,7 +24,7 @@
             "bluetooth": "Yes with Mobile Pairing.",
             "connection": "2 x Rj45 and Wi-Fi",
             "usb": "2 x USB-C",
-            "poE": "Yes"
+            "poE": true
         },
         {
             "id": 3,
@@ -37,7 +37,7 @@
             "bluetooth": "Yes with Mobile Pairing.",
             "connection": "2 x Rj45 and Wi-Fi",
             "usb": "2 x USB-C",
-            "poE": "Yes"
+            "poE": true
         },
         {
             "id": 4,
@@ -50,7 +50,7 @@
             "bluetooth": "Yes with Mobile Pairing.",
             "connection": "2 x Rj45 and Wi-Fi",
             "usb": "2 x USB-C",
-            "poE": "Yes"
+            "poE": true
         },
         {
             "id": 5,
@@ -63,7 +63,7 @@
             "bluetooth": "Yes with Mobile Pairing.",
             "connection": "2 x Rj45 and Wi-Fi",
             "usb": "2 x USB-C",
-            "poE": "Yes"
+            "poE": true
         },
         {
             "id": 6,
@@ -76,7 +76,7 @@
             "bluetooth": "Yes with Mobile Pairing.",
             "connection": "2 x Rj45 and Wi-Fi",
             "usb": "2 x USB-C",
-            "poE": "Yes"
+            "poE": true
         },
         {
             "id": 7,
@@ -89,7 +89,7 @@
             "bluetooth": "Yes with Mobile Pairing.",
             "connection": "2 x Rj45 and Wi-Fi",
             "usb": "2 x USB-C",
-            "poE": "Yes"
+            "poE": true
         },
         {
             "id": 8,
@@ -102,7 +102,7 @@
             "bluetooth": "Yes with Mobile Pairing.",
             "connection": "2 x Rj45 and Wi-Fi",
             "usb": "2 x USB-C",
-            "poE": "Yes"
+            "poE": true
         }
     ]
 }

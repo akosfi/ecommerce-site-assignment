@@ -1,0 +1,46 @@
+.tooltip {
+    .icon {
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 56px;
+        width: 360px;
+        background-color: #fff7d9;
+        z-index: 1;
+        display: flex;
+        padding: 16px;
+        gap: 16px;
+
+        .image {
+            flex: 0 0 30%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .details {
+            flex: 0 0 70%;
+
+            p {
+                font-size: 14px;
+                margin-bottom: 8px;
+
+                &.title {
+                    font-weight: 700;
+                }
+
+                &.description {
+                    margin-bottom: 16px;
+                }
+            }
+
+            .key-features {
+                display: grid;
+                grid-template-columns: 40% 1fr;
+            }
+        }
+    }
+}
