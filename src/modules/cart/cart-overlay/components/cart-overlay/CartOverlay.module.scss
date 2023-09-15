@@ -1,0 +1,81 @@
+.content {
+    position: relative;
+
+    .button {
+        padding-right: 48px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .icon {
+            position: relative;
+
+            img {
+                margin-right: 16px;
+                position: relative;
+                top: -3px;
+            }
+
+            .badge {
+                position: absolute;
+                background-color: #de0000;
+                border-radius: 100%;
+                bottom: -4px;
+                left: -4px;
+                min-width: 16px;
+                height: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 10px;
+                padding: 2px;
+            }
+        }
+
+        span {
+            color: white;
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        top: 48px;
+        right: 24px;
+        width: 324px;
+        background-color: white;
+        border-radius: 4px;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(153, 153, 153, 1);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(153, 153, 153, 1);
+        box-shadow: 0px 0px 10px 0px rgba(153, 153, 153, 1);
+        padding: 16px;
+
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        table {
+            table-layout: fixed;
+            width: 100%;
+            margin-bottom: 16px;
+
+            td,
+            th {
+                text-align: right;
+
+                &:first-child {
+                    text-align: left;
+                }
+            }
+        }
+
+        .total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+    }
+}

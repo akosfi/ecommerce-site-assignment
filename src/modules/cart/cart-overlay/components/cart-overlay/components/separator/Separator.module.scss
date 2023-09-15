@@ -1,0 +1,13 @@
+.separator {
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: #ededed;
+
+    &-normal {
+        height: 2px;
+    }
+
+    &-bold {
+        height: 4px;
+    }
+}

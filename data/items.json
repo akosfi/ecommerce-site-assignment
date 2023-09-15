@@ -3,12 +3,106 @@
         {
             "id": 1,
             "name": "Poly Edge 550",
-            "price": 30
+            "price": 30,
+            "imageSrc": "/assets/item1.png",
+            "description": "High end phone suitable for front-of house and exectuive users.",
+            "lines": 12,
+            "display": "5'' colour",
+            "bluetooth": "Yes with Mobile Pairing.",
+            "connection": "2 x Rj45 and Wi-Fi",
+            "usb": "2 x USB-C",
+            "poE": "Yes"
         },
         {
             "id": 2,
-            "name": "Poly Edge 320",
-            "price": 30
+            "name": "Poly Edge E320",
+            "price": 30,
+            "imageSrc": "/assets/item2.png",
+            "description": "High end phone suitable for front-of house and exectuive users.",
+            "lines": 12,
+            "display": "5'' colour",
+            "bluetooth": "Yes with Mobile Pairing.",
+            "connection": "2 x Rj45 and Wi-Fi",
+            "usb": "2 x USB-C",
+            "poE": "Yes"
+        },
+        {
+            "id": 3,
+            "name": "Poly Edge B30",
+            "price": 210,
+            "imageSrc": "/assets/item3.png",
+            "description": "High end phone suitable for front-of house and exectuive users.",
+            "lines": 12,
+            "display": "5'' colour",
+            "bluetooth": "Yes with Mobile Pairing.",
+            "connection": "2 x Rj45 and Wi-Fi",
+            "usb": "2 x USB-C",
+            "poE": "Yes"
+        },
+        {
+            "id": 4,
+            "name": "Nokia 3210",
+            "price": 2010,
+            "imageSrc": "/assets/item4.png",
+            "description": "High end phone suitable for front-of house and exectuive users.",
+            "lines": 12,
+            "display": "5'' colour",
+            "bluetooth": "Yes with Mobile Pairing.",
+            "connection": "2 x Rj45 and Wi-Fi",
+            "usb": "2 x USB-C",
+            "poE": "Yes"
+        },
+        {
+            "id": 5,
+            "name": "Blackwire 52xx",
+            "price": 29,
+            "imageSrc": "/assets/item5.png",
+            "description": "High end phone suitable for front-of house and exectuive users.",
+            "lines": 12,
+            "display": "5'' colour",
+            "bluetooth": "Yes with Mobile Pairing.",
+            "connection": "2 x Rj45 and Wi-Fi",
+            "usb": "2 x USB-C",
+            "poE": "Yes"
+        },
+        {
+            "id": 6,
+            "name": "Voyager 43xx",
+            "price": 29,
+            "imageSrc": "/assets/item6.png",
+            "description": "High end phone suitable for front-of house and exectuive users.",
+            "lines": 12,
+            "display": "5'' colour",
+            "bluetooth": "Yes with Mobile Pairing.",
+            "connection": "2 x Rj45 and Wi-Fi",
+            "usb": "2 x USB-C",
+            "poE": "Yes"
+        },
+        {
+            "id": 7,
+            "name": "Savi 72xx",
+            "price": 29,
+            "imageSrc": "/assets/item7.png",
+            "description": "High end phone suitable for front-of house and exectuive users.",
+            "lines": 12,
+            "display": "5'' colour",
+            "bluetooth": "Yes with Mobile Pairing.",
+            "connection": "2 x Rj45 and Wi-Fi",
+            "usb": "2 x USB-C",
+            "poE": "Yes"
+        },
+        {
+            "id": 8,
+            "name": "Voyager Free 60",
+            "price": 29,
+            "imageSrc": "/assets/item8.png",
+            "description": "High end phone suitable for front-of house and exectuive users.",
+            "lines": 12,
+            "display": "5'' colour",
+            "bluetooth": "Yes with Mobile Pairing.",
+            "connection": "2 x Rj45 and Wi-Fi",
+            "usb": "2 x USB-C",
+            "poE": "Yes"
         }
     ]
 }
