@@ -1,6 +1,6 @@
 import { AddToCartButton } from 'modules/cart/add-to-cart-button';
 import { Item } from 'modules/items';
-import { FC, useMemo } from 'react';
+import { FC } from 'react';
 
 import css from './ListingItem.module.scss';
 import ToolTip from './components/tooltip/Tooltip';

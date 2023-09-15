@@ -1,12 +1,11 @@
 import { FC, useEffect, useMemo, useState } from 'react';
 import { useCartContext } from 'modules/cart';
-import classNames from 'classnames';
-
-import css from './CartOverlay.module.scss';
 import Separator, { SeparatorVariant } from './components/separator/Separator';
 import { Button } from 'modules/input/button';
 import { ButtonSize } from 'modules/input/button/Button';
 import { PriceFormatter } from 'modules/data-display/price-formatter';
+
+import css from './CartOverlay.module.scss';
 
 const CartOverlay: FC = () => {
     const [isOpen, setIsOpen] = useState(false);

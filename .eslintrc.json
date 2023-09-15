@@ -6,7 +6,8 @@
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -15,9 +16,14 @@
     },
     "plugins": ["@typescript-eslint", "react"],
     "rules": {
-        "indent": ["error", "tab"],
-        "linebreak-style": ["error", "windows"],
         "quotes": ["error", "single"],
-        "semi": ["error", "always"]
+        "semi": ["error", "always"],
+        "react/react-in-jsx-scope": "off",
+        "indent": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }

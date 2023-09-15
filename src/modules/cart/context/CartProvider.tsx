@@ -1,5 +1,5 @@
 import { FC, ReactElement, useCallback, useState } from 'react';
-import cartContext, { intialCartContextValue } from './CartContext';
+import cartContext from './CartContext';
 import { Cart } from '../domain/Cart';
 import { Item } from 'modules/items';
 
