@@ -26,7 +26,7 @@ const ToolTip: FC<ToolTipProps> = ({ item, className }) => {
             onMouseOver={() => setIsOpen(true)}
             onMouseOut={() => setIsOpen(false)}
         >
-            <img src={tooltipIconSrc} alt="tooltip" className={css['icon']} />
+            <img src={tooltipIconSrc} alt="tooltip" />
             {isOpen && (
                 <div className={css['overlay']}>
                     <div className={css['image']}>

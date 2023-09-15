@@ -1,17 +1,22 @@
-.tooltip {
-    .icon {
-    }
+@import '../../../../../../../../../styles/breakpoints.scss';
 
+.tooltip {
     .overlay {
         position: absolute;
-        top: 0;
-        left: 56px;
-        width: 360px;
         background-color: #fff7d9;
         z-index: 1;
         display: flex;
         padding: 16px;
         gap: 16px;
+
+        width: 312px;
+        right: -52px;
+        top: 48px;
+
+        @include tablet-up {
+            left: 56px;
+            width: 360px;
+        }
 
         .image {
             flex: 0 0 30%;

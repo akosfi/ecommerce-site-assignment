@@ -1,3 +1,5 @@
+@import '../../../../../styles/breakpoints.scss';
+
 .header {
     background-color: #001f33;
     display: grid;
@@ -17,7 +19,7 @@
 .list {
     background: url('/assets/bg.png') no-repeat 0 -45vh;
 
-    min-width: calc(100vh - 60px);
+    min-width: calc(100vw - 60px);
 
     .shopName {
         font-size: 48px;
@@ -28,10 +30,26 @@
 
     .items {
         display: grid;
-        width: calc(4 * 248px + 3 * 24px);
         margin: 0 auto;
-        grid-template-columns: 248px 248px 248px 248px;
         column-gap: 24px;
         row-gap: 48px;
+
+        width: calc(1 * 248px);
+        grid-template-columns: 248px;
+
+        @include tablet-up {
+            width: calc(2 * 248px + 1 * 24px);
+            grid-template-columns: 248px 248px;
+        }
+
+        @include small-desktop-up {
+            width: calc(3 * 248px + 2 * 24px);
+            grid-template-columns: 248px 248px 248px;
+        }
+
+        @include large-desktop-up {
+            width: calc(4 * 248px + 3 * 24px);
+            grid-template-columns: 248px 248px 248px 248px;
+        }
     }
 }

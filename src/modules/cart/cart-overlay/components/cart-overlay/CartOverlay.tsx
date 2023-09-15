@@ -54,7 +54,7 @@ const CartOverlay: FC = () => {
                     <img src="/assets/cart.svg" />
                     <span className={css['badge']}>{itemNumberForBadge}</span>
                 </div>
-                <span>Shopping cart</span>
+                <span className={css['label']}>Shopping cart</span>
             </div>
             {isOpen && (
                 <div className={css['overlay']}>
