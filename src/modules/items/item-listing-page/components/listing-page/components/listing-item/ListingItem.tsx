@@ -4,35 +4,27 @@ import { FC, useMemo } from 'react';
 
 import css from './ListingItem.module.scss';
 import ToolTip from './components/tooltip/Tooltip';
+import { PriceFormatter } from 'modules/data-display/price-formatter';
 
 type ListingItemProps = {
     item: Item;
 };
 
-const ListingItem: FC<ListingItemProps> = ({ item }) => {
-    const formattedPrice = useMemo(
-        () =>
-            new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'GBP',
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0,
-            }).format(item.price),
-        [item.price]
-    );
-
-    return (
-        <div className={css['item']}>
-            <div className={css['image']}>
-                <img src={item.imageSrc} alt="item image" />
-            </div>
-
-            <p className={css['name']}>{item.name}</p>
-            <p className={css['price']}>{formattedPrice}</p>
-            <AddToCartButton item={item} />
-            <ToolTip item={item} className={css['tooltip']} />
+const ListingItem: FC<ListingItemProps> = ({ item }) => (
+    <div className={css['item']}>
+        <div className={css['image']}>
+            <img src={item.imageSrc} alt="item image" />
         </div>
-    );
-};
+
+        <p className={css['name']}>{item.name}</p>
+        <PriceFormatter price={item.price}>
+            {(formattedPrice) => (
+                <p className={css['price']}>{formattedPrice}</p>
+            )}
+        </PriceFormatter>
+        <AddToCartButton item={item} />
+        <ToolTip item={item} className={css['tooltip']} />
+    </div>
+);
 
 export default ListingItem;

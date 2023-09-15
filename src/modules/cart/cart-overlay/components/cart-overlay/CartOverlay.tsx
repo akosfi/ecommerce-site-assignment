@@ -6,6 +6,7 @@ import css from './CartOverlay.module.scss';
 import Separator, { SeparatorVariant } from './components/separator/Separator';
 import { Button } from 'modules/input/button';
 import { ButtonSize } from 'modules/input/button/Button';
+import { PriceFormatter } from 'modules/data-display/price-formatter';
 
 const CartOverlay: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,14 +25,6 @@ const CartOverlay: FC = () => {
         }
     };
 
-    const formatPrice = (price: number) =>
-        new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'GBP',
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0,
-        }).format(price);
-
     const totalPrice = useMemo(
         () =>
             cart.items.reduce<number>(
@@ -41,6 +34,7 @@ const CartOverlay: FC = () => {
             ),
         [cart.items]
     );
+
     const totalItemQuantity = useMemo(
         () =>
             cart.items.reduce<number>(
@@ -65,7 +59,7 @@ const CartOverlay: FC = () => {
             {isOpen && (
                 <div className={css['overlay']}>
                     <p className={css['title']}>
-                        You have {cart.items.length} items in your cart!
+                        You have {totalItemQuantity} items in your cart!
                     </p>
                     <Separator variant={SeparatorVariant.NORMAL} />
                     <table>
@@ -87,9 +81,13 @@ const CartOverlay: FC = () => {
                                 <tr key={item.id}>
                                     <td>{item.name}</td>
                                     <td>{quantity}</td>
-                                    <td>
-                                        {formatPrice(quantity * item.price)}
-                                    </td>
+                                    <PriceFormatter
+                                        price={quantity * item.price}
+                                    >
+                                        {(formattedPrice) => (
+                                            <td>{formattedPrice}</td>
+                                        )}
+                                    </PriceFormatter>
                                 </tr>
                             ))}
                         </tbody>
@@ -97,7 +95,10 @@ const CartOverlay: FC = () => {
                     <Separator variant={SeparatorVariant.BOLD} />
                     <div className={css['total']}>
                         <p>Total Order Value</p>
-                        <p>{formatPrice(totalPrice)}</p>
+
+                        <PriceFormatter price={totalPrice}>
+                            {(formattedPrice) => <p>{formattedPrice}</p>}
+                        </PriceFormatter>
                     </div>
                     <Separator variant={SeparatorVariant.NORMAL} />
                     <Button
