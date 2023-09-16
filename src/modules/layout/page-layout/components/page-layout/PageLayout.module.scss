@@ -1,0 +1,13 @@
+@import '../../../../../styles/breakpoints.scss';
+
+.layout {
+    background: url('/assets/bg.png') no-repeat 0 -45vh;
+
+    min-height: calc(100vh - 60px);
+
+    padding-top: 60px;
+
+    @include tablet-up {
+        padding-top: 0;
+    }
+}

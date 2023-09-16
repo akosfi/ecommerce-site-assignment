@@ -2,16 +2,18 @@ import { AddToCartButton } from 'modules/cart/add-to-cart-button';
 import { Item } from 'modules/items';
 import { FC } from 'react';
 
-import css from './ListingItem.module.scss';
-import ToolTip from './components/tooltip/Tooltip';
 import { PriceFormatter } from 'modules/data-display/price-formatter';
+import { Card } from 'modules/data-display/card';
+import ToolTip from './components/tooltip/Tooltip';
+
+import css from './ListingItem.module.scss';
 
 type ListingItemProps = {
     item: Item;
 };
 
 const ListingItem: FC<ListingItemProps> = ({ item }) => (
-    <div className={css['item']}>
+    <Card className={css['item']}>
         <div className={css['image']}>
             <img src={item.imageSrc} alt="item image" />
         </div>
@@ -24,7 +26,7 @@ const ListingItem: FC<ListingItemProps> = ({ item }) => (
         </PriceFormatter>
         <AddToCartButton item={item} />
         <ToolTip item={item} className={css['tooltip']} />
-    </div>
+    </Card>
 );
 
 export default ListingItem;

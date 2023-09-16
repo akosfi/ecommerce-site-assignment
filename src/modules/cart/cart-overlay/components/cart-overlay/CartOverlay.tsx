@@ -1,16 +1,19 @@
-import { FC, useEffect, useMemo, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { useCartContext } from 'modules/cart';
 import Separator, { SeparatorVariant } from './components/separator/Separator';
 import { Button } from 'modules/input/button';
 import { ButtonSize } from 'modules/input/button/Button';
 import { PriceFormatter } from 'modules/data-display/price-formatter';
+import { useRouter } from 'next/router';
 
 import css from './CartOverlay.module.scss';
 
 const CartOverlay: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const { cart } = useCartContext();
+    const { cart, totalItemQuantity, totalPrice } = useCartContext();
+
+    const { push } = useRouter();
 
     useEffect(() => {
         if (cart.items.length) {
@@ -24,27 +27,12 @@ const CartOverlay: FC = () => {
         }
     };
 
-    const totalPrice = useMemo(
-        () =>
-            cart.items.reduce<number>(
-                (totalAmount, { item, quantity }) =>
-                    (totalAmount += item.price * quantity),
-                0
-            ),
-        [cart.items]
-    );
-
-    const totalItemQuantity = useMemo(
-        () =>
-            cart.items.reduce<number>(
-                (totalItemQuantity, { quantity }) =>
-                    (totalItemQuantity += quantity),
-                0
-            ),
-        [cart.items]
-    );
-
     const itemNumberForBadge = totalItemQuantity > 9 ? '9+' : totalItemQuantity;
+
+    const navigateToCheckout = () => {
+        setIsOpen(false);
+        push('/checkout');
+    };
 
     return (
         <div className={css['content']}>
@@ -103,7 +91,7 @@ const CartOverlay: FC = () => {
                     <Button
                         size={ButtonSize.SMALL}
                         label="Checkout"
-                        onClick={() => null}
+                        onClick={navigateToCheckout}
                     />
                 </div>
             )}

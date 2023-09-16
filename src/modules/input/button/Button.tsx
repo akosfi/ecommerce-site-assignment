@@ -12,12 +12,17 @@ type ButtonProps = {
     size: ButtonSize;
     onClick: () => void;
     label: string;
+    className?: string;
 };
 
-const Button: FC<ButtonProps> = ({ size, onClick, label }) => (
+const Button: FC<ButtonProps> = ({ size, onClick, label, className }) => (
     <button
         onClick={onClick}
-        className={classNames(css['button'], css[`button-size-${size}`])}
+        className={classNames(
+            css['button'],
+            css[`button-size-${size}`],
+            className
+        )}
     >
         {label}
     </button>
