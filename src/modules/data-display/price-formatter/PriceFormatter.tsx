@@ -14,7 +14,7 @@ const PriceFormatter: FC<PriceFormatterProps> = ({ price, children }) => {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0,
             }).format(price),
-        [price]
+        [price],
     );
 
     return children(formattedPrice);

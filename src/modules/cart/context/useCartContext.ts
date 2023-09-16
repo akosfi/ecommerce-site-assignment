@@ -9,9 +9,9 @@ const useCartContext = () => {
             cart.items.reduce<number>(
                 (totalAmount, { item, quantity }) =>
                     (totalAmount += item.price * quantity),
-                0
+                0,
             ),
-        [cart.items]
+        [cart.items],
     );
 
     const totalItemQuantity = useMemo(
@@ -19,9 +19,9 @@ const useCartContext = () => {
             cart.items.reduce<number>(
                 (totalItemQuantity, { quantity }) =>
                     (totalItemQuantity += quantity),
-                0
+                0,
             ),
-        [cart.items]
+        [cart.items],
     );
 
     return { cart, addItem, totalPrice, totalItemQuantity };

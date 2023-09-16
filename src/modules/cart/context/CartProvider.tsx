@@ -14,7 +14,7 @@ const CartProvider: FC<CartProviderProps> = ({ children }) => {
         (item: Item) => {
             const items = [...cart.items];
             const alreadyAddedItem = items.find(
-                (cartItem) => cartItem.item.id === item.id
+                (cartItem) => cartItem.item.id === item.id,
             );
             if (alreadyAddedItem) {
                 alreadyAddedItem.quantity += 1;
@@ -24,7 +24,7 @@ const CartProvider: FC<CartProviderProps> = ({ children }) => {
 
             setCart({ items });
         },
-        [cart, setCart]
+        [cart, setCart],
     );
 
     return (

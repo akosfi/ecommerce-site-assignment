@@ -21,7 +21,7 @@ const Button: FC<ButtonProps> = ({ size, onClick, label, className }) => (
         className={classNames(
             css['button'],
             css[`button-size-${size}`],
-            className
+            className,
         )}
     >
         {label}

@@ -17,7 +17,7 @@ const ToolTip: FC<ToolTipProps> = ({ item, className }) => {
             !isOpen
                 ? '/assets/tooltip-static.svg'
                 : '/assets/tooltip-hover.svg',
-        [isOpen]
+        [isOpen],
     );
 
     return (
