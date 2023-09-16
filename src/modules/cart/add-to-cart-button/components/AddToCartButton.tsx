@@ -1,6 +1,5 @@
 import { useCartContext } from 'modules/cart';
-import { Button } from 'modules/input/button';
-import { ButtonSize } from 'modules/input/button/Button';
+import { Button, ButtonSize } from 'modules/input/button';
 import { Item } from 'modules/items';
 import { FC } from 'react';
 

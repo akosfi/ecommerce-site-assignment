@@ -1,8 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { useCartContext } from 'modules/cart';
 import Separator, { SeparatorVariant } from './components/separator/Separator';
-import { Button } from 'modules/input/button';
-import { ButtonSize } from 'modules/input/button/Button';
+import { Button, ButtonSize } from 'modules/input/button';
 import { PriceFormatter } from 'modules/data-display/price-formatter';
 import { useRouter } from 'next/router';
 

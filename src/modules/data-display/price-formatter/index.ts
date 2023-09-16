@@ -1,1 +1,1 @@
-export { default as PriceFormatter } from './PriceFormatter';
+export { default as PriceFormatter } from './components/price-formatter/PriceFormatter';
