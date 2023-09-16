@@ -30,6 +30,14 @@ const CheckoutPage: FC = () => {
                             <p>
                                 Units: <span>{item.quantity}</span>
                             </p>
+
+                            <PriceFormatter price={item.item.price}>
+                                {(formattedPrice) => (
+                                    <p>
+                                        Price: <span>{formattedPrice}</span>
+                                    </p>
+                                )}
+                            </PriceFormatter>
                         </div>
                         <div className={css['pricing']}>
                             <PriceFormatter

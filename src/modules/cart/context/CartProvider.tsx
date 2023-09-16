@@ -12,17 +12,27 @@ const CartProvider: FC<CartProviderProps> = ({ children }) => {
 
     const addItem = useCallback(
         (item: Item) => {
-            const items = [...cart.items];
-            const alreadyAddedItem = items.find(
+            const items = cart.items;
+            const indexOfSelectedItemInCart = items.findIndex(
                 (cartItem) => cartItem.item.id === item.id,
             );
-            if (alreadyAddedItem) {
-                alreadyAddedItem.quantity += 1;
-            } else {
-                items.push({ item, quantity: 1 });
-            }
 
-            setCart({ items });
+            const selectedItemInCart = items[indexOfSelectedItemInCart];
+
+            if (indexOfSelectedItemInCart !== -1 && selectedItemInCart) {
+                setCart({
+                    items: [
+                        ...items.slice(0, indexOfSelectedItemInCart),
+                        {
+                            ...selectedItemInCart,
+                            quantity: selectedItemInCart.quantity + 1,
+                        },
+                        ...items.slice(indexOfSelectedItemInCart + 1),
+                    ],
+                });
+            } else {
+                setCart({ items: [...items, { item, quantity: 1 }] });
+            }
         },
         [cart, setCart],
     );
