@@ -2,10 +2,11 @@ import { useCartContext } from 'modules/cart';
 import { useRouter } from 'next/router';
 import { FC, useEffect } from 'react';
 
-import css from './CheckoutPage.module.scss';
 import { PriceFormatter } from 'modules/data-display/price-formatter';
 import { Button, ButtonSize } from 'modules/input/button';
 import CheckoutListItem from './components/checkout-list-item/CheckoutListItem';
+
+import css from './CheckoutPage.module.scss';
 
 const CheckoutPage: FC = () => {
     const { replace } = useRouter();
