@@ -1,5 +1,5 @@
 import { Item } from 'modules/items';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 
 import ListingItem from './components/listing-item/ListingItem';
 
@@ -24,4 +24,4 @@ const ListingPage: FC<ListingPageProps> = ({ items }) => (
     </>
 );
 
-export default ListingPage;
+export default memo(ListingPage);

@@ -1,6 +1,6 @@
 import { useCartContext } from 'modules/cart';
 import { useRouter } from 'next/router';
-import { FC, useEffect } from 'react';
+import { FC, memo, useEffect } from 'react';
 
 import { PriceFormatter } from 'modules/data-display/price-formatter';
 import { Button, ButtonSize } from 'modules/input/button';
@@ -43,4 +43,4 @@ const CheckoutPage: FC = () => {
     );
 };
 
-export default CheckoutPage;
+export default memo(CheckoutPage);
