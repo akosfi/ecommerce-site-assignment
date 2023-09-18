@@ -5,24 +5,52 @@
         position: absolute;
         background-color: #fff7d9;
         z-index: 1;
-        display: flex;
+        display: none;
         padding: 16px;
         gap: 16px;
-
-        width: 312px;
-        right: -52px;
+        flex-direction: column;
+        width: 248px;
         top: 48px;
+        box-sizing: border-box;
+        right: -8px;
+
+        &-visible {
+            display: flex;
+        }
 
         @include tablet-up {
-            left: 56px;
+            flex-direction: row;
+            left: unset;
+            right: -52px;
+            max-width: unset;
             width: 360px;
+        }
+
+        @include small-desktop-up {
+            top: 0;
+            left: 56px;
+        }
+
+        &-invert-alignment {
+            @include small-desktop-up {
+                left: unset;
+                right: 56px;
+            }
         }
 
         .image {
             flex: 0 0 30%;
+            height: 140px;
 
             img {
-                width: 100%;
+                max-width: 70%;
+                max-height: 100%;
+                margin: 0 auto;
+                display: block;
+
+                @include tablet-up {
+                    max-width: 100%;
+                }
             }
         }
 
