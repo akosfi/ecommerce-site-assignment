@@ -13,7 +13,7 @@ type ListingItemProps = {
 };
 
 const ListingItem: FC<ListingItemProps> = ({ item }) => (
-    <Card className={css['item']}>
+    <Card className={css['card']}>
         <div className={css['image']}>
             <img src={item.imageSrc} alt="item image" />
         </div>

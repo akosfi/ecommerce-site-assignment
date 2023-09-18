@@ -11,7 +11,7 @@ type PageLayoutProps = {
 const PageLayout: FC<PageLayoutProps> = ({ children }) => (
     <>
         <Header />
-        <div className={css['layout']}>{children}</div>
+        <div className={css['content']}>{children}</div>
     </>
 );
 

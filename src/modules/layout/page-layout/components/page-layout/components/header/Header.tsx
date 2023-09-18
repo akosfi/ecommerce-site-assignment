@@ -8,7 +8,7 @@ const Header: FC = () => {
     const { push } = useRouter();
 
     return (
-        <nav className={css['header']}>
+        <nav className={css['navigation']}>
             <span />
             <p className={css['title']} onClick={() => push('/')}>
                 Hallo world
