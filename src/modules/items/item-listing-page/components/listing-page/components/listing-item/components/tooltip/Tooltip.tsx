@@ -16,7 +16,12 @@ const ToolTip: FC<ToolTipProps> = ({ item, className }) => {
     const overlayRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (!overlayRef.current || !isOpen) {
+        if (!overlayRef.current) {
+            return;
+        }
+
+        if (!isOpen) {
+            setIsAlignmentInverted(false);
             return;
         }
 
@@ -25,6 +30,8 @@ const ToolTip: FC<ToolTipProps> = ({ item, className }) => {
 
         if (overlayWidth + xPositionOfOverlay > document.body.clientWidth) {
             setIsAlignmentInverted(true);
+        } else {
+            setIsAlignmentInverted(false);
         }
     }, [overlayRef, isOpen]);
 
